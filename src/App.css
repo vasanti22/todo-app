@@ -1,38 +1,70 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+
+* {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  outline: none;
+}
+body{
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+}
+.todo p.completed {
+  text-decoration: line-through;
+  background: #CEDEBD;
+}
+.todo-wrapper {
+  background: #435334;
+  color: #fff;
+  border-radius: 10px;
+  max-width: 500px;
+  margin: 40px auto;
   text-align: center;
+  padding: 20px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.todoform input {
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #9EB384;
+  background: transparent;
+  color: #fff;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.todobtn {
+  padding: 10px;
+  border: 1px solid #9EB384;
+  background: #9EB384;
+  cursor: pointer;
+  color: #fff;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.todo {
+  margin: 10px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: wrap;
+  flex-direction: row;
+  position: relative;
+}
+.todo p {
+  font-size: 16px;
+  cursor: pointer;
+  text-align: left;
+  background: #9EB384;
+  padding: 10px;
+  border-radius: 5px;
+  width: 100%;
+
 }
 
-.App-link {
-  color: #61dafb;
+.icon-wrap {
+  position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.icon-wrap svg {
+  margin: 5px;
+  cursor: pointer;
 }
